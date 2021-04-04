@@ -2,10 +2,10 @@
 pipeline{
     agent any
     stages{
-        stage('build') {
+        stage('Test') {
             steps{
                 echo "starting build!"
-                sh 'make'
+                junit 'surefire-reports/*.xml'
                 echo "build complete!"
             }
         }
