@@ -14,6 +14,7 @@ class JHomeControllerTest {
 
     @Test
     public void testSayHello(){
+        assertNotNull(jHomeController.sayhello());
         assertEquals("Hello!", jHomeController.sayhello());
     }
 }
